@@ -1,0 +1,124 @@
+ext {
+    versionOfName = '1.0'
+    versionOfCode = 1
+
+    versionOfCompileSdk = 34
+    versionOfMinSdk = 24
+    versionOfTargetSdk = 34
+    versionOfBuildTools = '30.0.2'
+
+    versions = [
+            "kotlinVersion"              : '1.7.10',
+            "googleServicesVersion"      : '4.3.10',
+            "coreVersion"                : '1.3.2',
+            "navigationVersion"          : '2.5.3',
+            "anndroidGradlePluginVersion": '4.1.0',
+
+            // UI
+            "appCompatVersion"           : '1.2.0',
+            "activityVersion"            : '1.1.0',
+            "fragmentVersion"            : '1.3.0',
+            "materialVersion"            : '1.3.0',
+            "constratintLayoutVersion"   : '2.1.0-alpha2',
+            "cardViewVersion"            : '1.0.0',
+            "sdpsspVersion"              : '1.0.6',
+
+            // Legacy Support
+            "legacySupportVersion"       : '1.0.0',
+
+            // Architecture Components
+            "lifecycleVersion"           : '1.2.1',
+
+            // Recyclerview
+            "recyclerviewVersion"        : '1.2.1',
+
+            // Koin
+            "koinVersion"                : '2.1.6',
+
+            // Network
+            "retrofitVersion"            : '2.9.0',
+            "okhttpVersion"              : '4.9.3',
+
+            // Glide
+            "glideVersion"               : '4.12.0',
+
+            // Google
+            "googleLocationVersion"      : '18.0.3',
+            "googlePlayCoreVersion"      : '1.7.3',
+
+            // Room
+            "roomVersion"                : '2.4.2'
+
+    ]
+
+    koinDependencies = [
+            koinCore             : "io.insert-koin:koin-android:${versions.koinVersion}",
+            koinAndroidxViewModel: "io.insert-koin:koin-androidx-viewmodel:${versions.koinVersion}"
+    ]
+
+    networkingDependencies = [
+            retrofit             : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
+            retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${versions.retrofitVersion}",
+            retrofitRxJavaAdapter: "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofitVersion}",
+            okHttp3              : "com.squareup.okhttp3:okhttp:${versions.okhttpVersion}",
+            okHttp3Logging       : "com.squareup.okhttp3:logging-interceptor:${versions.okhttpVersion}",
+
+    ]
+
+    architectureComponentsDependencies = [
+            lifecycleExtensions  : "androidx.lifecycle:lifecycle-extensions:${versions.lifecycleVersion}",
+            lifecycleLiveData    : "androidx.lifecycle:lifecycle-livedata:${versions.lifecycleVersion}",
+            lifecycleViewModelKtx: "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycleVersion}",
+            lifecycleRuntimeKtx  : "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycleVersion}",
+
+    ]
+
+    navigationComponentDependencies = [
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:${versions.navigationVersion}",
+            navigationUi      : "androidx.navigation:navigation-ui-ktx:${versions.navigationVersion}",
+            navigationCommon  : "androidx.navigation:navigation-common-ktx:${versions.navigationVersion}",
+    ]
+
+    glideDependencies = [
+            glide: "com.github.bumptech.glide:glide:${versions.glideVersion}"
+    ]
+
+    recyclerviewDependencies = [
+            recyclerview: "androidx.recyclerview:recyclerview:${versions.recyclerviewVersion}",
+    ]
+
+    legacySupportDependencies = [
+            constraintlayout: "androidx.constraintlayout:constraintlayout:${versions.constratintLayoutVersion}"
+    ]
+
+    roomDependencies = [
+            room_runtime: "androidx.room:room-runtime:${versions.roomVersion}",
+            room_ktx    : "androidx.room:room-ktx:${versions.roomVersion}",
+    ]
+
+    coreDependencies = [
+            navigationUi: "androidx.core:core-ktx:${versions.coreVersion}",
+    ]
+
+    uiDependencies = [
+            appcompat: "androidx.appcompat:appcompat:${versions.appCompatVersion}",
+            material : "com.google.android.material:material:${versions.materialVersion}",
+            fragment : "androidx.fragment:fragment-ktx:${versions.fragmentVersion}",
+            sdp :  "com.intuit.sdp:sdp-android:${versions.sdpsspVersion}",
+            ssp : "com.intuit.ssp:ssp-android:${versions.sdpsspVersion}",
+            gif : "pl.droidsonroids.gif:android-gif-drawable:1.2.17",
+    ]
+
+    kotlinDependencies = [
+            kotlinStdlib: "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlinVersion}",
+    ]
+
+    firebaseDependencies = [
+
+    ]
+
+    googleDependecies = [
+            playService: "com.google.android.gms:play-services-analytics-impl:18.0.3",
+    ]
+
+}

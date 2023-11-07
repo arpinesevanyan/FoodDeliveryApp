@@ -1,0 +1,104 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.arpinesevanyan.fooddeliveryapp'
+    compileSdk versionOfCompileSdk
+
+    defaultConfig {
+        applicationId "com.arpinesevanyan.fooddeliveryapp"
+        minSdk versionOfMinSdk
+        targetSdk versionOfTargetSdk
+        versionCode versionOfCode
+        versionName versionOfName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    kotlinOptions {
+        freeCompilerArgs += "-Xjvm-default=all"
+        jvmTarget = '1.8'
+    }
+    configurations {
+        implementation.exclude group: 'org.jetbrains', module: 'annotations'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding true
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //ViewPager2
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    //Coroutine
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Koin
+    api koinDependencies.values()
+
+    //Network
+    api networkingDependencies.values()
+
+    //Architecture Components
+    api architectureComponentsDependencies.values()
+
+    // Navigation Components
+    api navigationComponentDependencies.values()
+
+    //Glide
+    api glideDependencies.values()
+
+    //Recycler View
+    api recyclerviewDependencies.values()
+
+    //Legacy Support
+    api legacySupportDependencies.values()
+
+    //Room
+    api roomDependencies.values()
+
+    //Core
+    api coreDependencies.values()
+
+    //UI
+    api uiDependencies.values()
+
+    //Kotlin
+    api kotlinDependencies.values()
+
+    //google
+    api googleDependecies.values()
+
+}

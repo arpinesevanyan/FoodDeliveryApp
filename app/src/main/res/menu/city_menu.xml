@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/city_moscow"
+        android:title="Москва" />
+    <item
+        android:id="@+id/city_new_york"
+        android:title="Нью-Йорк" />
+    <item
+        android:id="@+id/city_yerevan"
+        android:title="Ереван" />
+    <item
+        android:id="@+id/city_piter"
+        android:title="Санкт-Петербург" />
+    <item
+        android:id="@+id/city_paris"
+        android:title="Париж" />
+    <item
+        android:id="@+id/city_tbilisi"
+        android:title="Тбилиси" />
+</menu>
