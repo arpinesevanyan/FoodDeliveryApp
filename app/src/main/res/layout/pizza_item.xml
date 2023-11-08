@@ -10,10 +10,10 @@
             android:id="@+id/pizzaImageView"
             android:layout_width="160dp"
             android:layout_height="90dp"
-            android:scaleType="centerCrop"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,14 +33,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.152" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/pizzaPriceTextView"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pizzaPriceButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/button_background"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
             android:padding="8dp"
+            android:paddingTop="4dp"
+            android:textColor="@color/pink"
+            android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -49,11 +52,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:ellipsize="end"
             android:maxLines="5"
             android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/pizzaImageView"
             app:layout_constraintTop_toBottomOf="@+id/pizzaNameTextView" />
 

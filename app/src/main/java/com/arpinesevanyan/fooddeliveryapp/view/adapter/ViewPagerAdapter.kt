@@ -1,4 +1,4 @@
-package com.arpinesevanyan.fooddeliveryapp.ui.adapter
+package com.arpinesevanyan.fooddeliveryapp.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import com.arpinesevanyan.fooddeliveryapp.R
-import com.arpinesevanyan.fooddeliveryapp.data.SliderData
+import com.arpinesevanyan.fooddeliveryapp.model.data.SliderData
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 

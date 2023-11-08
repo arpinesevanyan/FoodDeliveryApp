@@ -1,4 +1,4 @@
-package com.arpinesevanyan.fooddeliveryapp.data
+package com.arpinesevanyan.fooddeliveryapp.model.data
 
 enum class SliderData(
     val imageUrl: String,

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonStyle">
+        <item name="android:backgroundTint">@color/pink</item>
+        <item name="android:textSize">15sp</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>
