@@ -1,5 +1,6 @@
 package com.arpinesevanyan.fooddeliveryapp.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -29,5 +30,7 @@ class MenuViewModel : ViewModel() {
             PizzaItem.SUPREME
         )
         _pizzas.value = pizzaList
+
+        Log.d("Log.d", "Pizzas loaded: $pizzaList")
     }
 }

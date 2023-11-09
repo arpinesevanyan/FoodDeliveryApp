@@ -1,7 +1,9 @@
 package com.arpinesevanyan.fooddeliveryapp.view.ui.fragment
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
@@ -29,9 +31,14 @@ class MenuFragment : Fragment() {
         SliderData.SLIDER3
     )
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        menuViewModel = ViewModelProvider(this).get(MenuViewModel::class.java)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_menu, container, false)
+        menuViewModel = ViewModelProvider(requireActivity()).get(MenuViewModel::class.java)
+
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -65,11 +72,11 @@ class MenuFragment : Fragment() {
         }
 
         cityDropdownImageView.setOnClickListener { view ->
-            showCityPopupMenu(view, cityName)
+            showCityPopupMenu(view)
         }
     }
 
-    private fun showCityPopupMenu(view: View, cityName: TextView) {
+    private fun showCityPopupMenu(view: View) {
         val popupMenu = PopupMenu(requireContext(), view)
         popupMenu.menuInflater.inflate(R.menu.city_menu, popupMenu.menu)
 
@@ -84,19 +91,19 @@ class MenuFragment : Fragment() {
                     true
                 }
                 R.id.city_tbilisi -> {
-                    cityName.text = "Тбилиси"
+                    menuViewModel.setCity("Тбилиси")
                     true
                 }
                 R.id.city_yerevan -> {
-                    cityName.text = "Ереван"
+                    menuViewModel.setCity("Ереван")
                     true
                 }
                 R.id.city_paris -> {
-                    cityName.text = "Париж"
+                    menuViewModel.setCity("Париж")
                     true
                 }
                 R.id.city_piter -> {
-                    cityName.text = "Санкт-Петербург"
+                    menuViewModel.setCity("Санкт-Петербург")
                     true
                 }
                 else -> false
@@ -105,5 +112,5 @@ class MenuFragment : Fragment() {
 
         popupMenu.show()
     }
-}
 
+}
